@@ -5,9 +5,9 @@ const dbURI='mongodb+srv://codeUser:ltU4j2KhSciBC8sz@cluster0.6xvtr.mongodb.net/
 mongoose.connect(dbURI)
     .then((result)=>console.log("DB is connected"))
     .catch((err)=>console.log(err));
-//const bodyParser = require('body-parser');
-//app.use(express.static(__dirname));
-/*
+const bodyParser = require('body-parser');
+app.use(express.static(__dirname));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 let universitiesArr=require("./universities.json");
@@ -51,6 +51,6 @@ app.post("/finalProj/add",
         response.send({ "message": "University added successfully to the table" });
     }
 );
-*/
+
 
 app.listen(4500, ()=>{console.log("Success")});
